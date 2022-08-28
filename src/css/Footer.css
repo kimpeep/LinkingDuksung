@@ -1,0 +1,25 @@
+.footer {
+    background: transparent ;
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    color: #F4EEE4;
+    text-align: center;
+}
+
+.footer-center {
+    padding-left: 30px;
+    text-align: center;
+}
+
+.footer-right {
+    display: flex;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.footer-text {
+    font-size : 14px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}

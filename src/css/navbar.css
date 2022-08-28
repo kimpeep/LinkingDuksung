@@ -1,0 +1,38 @@
+.navbar {
+    background: transparent ;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    font-size: 24px;
+    color: #FFFFFF;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.left{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.nav-logo {
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+}
+
+.nav-links {
+    margin-left: 50px;
+    padding-right: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 20px;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
