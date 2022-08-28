@@ -1,5 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import "../css/LandingPage.css"
+import button from "../img/button.png"
 
 const LandingPage = () => {
     return(
@@ -17,9 +19,12 @@ const LandingPage = () => {
                     at Duksung!
                 </div>
             </div>
+            <NavLink to="/dataunlock">
             <button className="landingButton">
                 Data UnLock!
             </button>
+            </NavLink>
+
         </div>
     )
 
