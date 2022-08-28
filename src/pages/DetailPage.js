@@ -1,14 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../css/DetailPage.css";
 import { useLocation } from "react-router-dom";
+import ratioData from "../data/MajorRatioData.json";
 
 const DetailPage = (props) => {
   const location = useLocation();
   //   console.log(location.state.major);
   const major = location.state.major || "";
-  const first = (750 * 63) / 100;
-  const second = (750 * 27) / 100;
+  const [IntensiveRatio, setIntensiveRatio] = useState(100);
+  const [SecondRatio, setSecondRatio] = useState(100);
+
+  let first = (750 * IntensiveRatio) / 100;
+  let second = (750 * SecondRatio) / 100;
+
+  useEffect(() => {
+    const ratio = ratioData.filter((data) => {
+      return data.Major === location.state.major;
+    });
+    setIntensiveRatio(
+      Math.round(
+        (ratio[0].Intensive / (ratio[0].Intensive + ratio[0].Second)) * 100
+      )
+    );
+    setSecondRatio(
+      Math.round(
+        (ratio[0].Second / (ratio[0].Intensive + ratio[0].Second)) * 100
+      )
+    );
+    // console.log(ratio.Second / (ratio.Intensive + ratio.Second));
+    console.log(
+      Math.round(
+        (ratio[0].Second / (ratio[0].Intensive + ratio[0].Second)) * 100
+      )
+    );
+  }, []);
+
+  useEffect(() => {
+    console.log(IntensiveRatio);
+  }, [IntensiveRatio]);
 
   return (
     <div className="detail">
@@ -17,10 +47,10 @@ const DetailPage = (props) => {
       </div>
       <div className="graph">
         <div className="circle" style={{ width: first, height: first }}>
-          심화전공 <br /> 63%
+          심화전공 <br /> {IntensiveRatio}%
         </div>
         <div className="circle" style={{ width: second, height: second }}>
-          제2전공 <br /> 27%
+          제2전공 <br /> {SecondRatio}%
         </div>
       </div>
 

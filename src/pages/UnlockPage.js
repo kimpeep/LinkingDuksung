@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "../css/UnlockPage.css";
 import GCData from "../data/GCData.json";
 import STData from "../data/STData.json";
