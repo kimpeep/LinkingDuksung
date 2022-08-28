@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
 import "../css/navbar.css";
 import Footer from './Footer.js';
-import logo from "../img/logo.png";
+import logo from "../img/textlogo.png";
 
 
 const Navbar = () => {
@@ -15,7 +15,6 @@ const Navbar = () => {
               className="nav-logo"
               alt="홈 아이콘"
               src={logo}
-              width="60px"
               height="60px"
             />
           </NavLink>
