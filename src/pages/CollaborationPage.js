@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/CollaborationPage.css";
+import search from "../img/search.png";
 import majorData from "../data/majorData.json";
 
 const CollaborationPage = () => {
@@ -28,9 +29,21 @@ const CollaborationPage = () => {
                 </option>
               ))}
           </select>
-          <p>를 선택한 사람은?</p>
+          <p>을 선택한 사람은?</p>
         </div>
-        <div className="type-result">
+        <div className="search-box">
+          <button className="search-btn">
+            <img
+              id="search-img"
+              src={search}
+              alt="검색"
+              width="25px"
+              height="25px"
+            ></img>
+            <div id="go-text">GO!</div>
+          </button>
+        </div>
+        <div className="type-result" id="type-result">
           <p>
             총 <span>0</span> 명이에요!
           </p>
