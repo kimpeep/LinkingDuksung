@@ -1,109 +1,115 @@
 @font-face {
-    font-family: "PretendardExtra";
-    src: url("../font/Pretendard-ExtraBold.ttf");
+  font-family: "PretendardExtra";
+  src: url("../font/Pretendard-ExtraBold.ttf");
 }
 @font-face {
-    font-family: "PretendardSemi";
-    src: url("../font/Pretendard-SemiBold.ttf");
+  font-family: "PretendardSemi";
+  src: url("../font/Pretendard-SemiBold.ttf");
 }
 @font-face {
-    font-family: "PretendardRegular";
-    src: url("../font/Pretendard-Regular.ttf");
+  font-family: "PretendardRegular";
+  src: url("../font/Pretendard-Regular.ttf");
 }
 
-@media all and (min-width:1080px) {
-    .select-wrapper{
-        flex-direction: row;
-    }
-    .type-result{
-        margin-top: 10%;
-    }
-    .search-box{
-        margin-top: 6vh;
-    }
+@media all and (min-width: 1080px) {
+  .select-wrapper {
+    flex-direction: row;
+  }
+  .type-result {
+    margin-top: 10%;
+  }
+  .search-box {
+    margin-top: 6vh;
+  }
 }
 
-@media all and (max-width:1080px) {
-    .select-wrapper{
-        flex-direction: column;
-    }
+@media all and (max-width: 1080px) {
+  .select-wrapper {
+    flex-direction: column;
+  }
 }
 
-.CollaborationPage{
-    font-family: "PretendardSemi";
-    color: #FFFFFF;
-    font-size: 38px;
-    height: 70%;
-    width: 80%;
-    padding: 10%;
+.CollaborationPage {
+  font-family: "PretendardSemi";
+  color: #ffffff;
+  font-size: 38px;
+  height: 70%;
+  width: 80%;
+  padding: 10%;
 }
 
-.select-wrapper{
-    display: flex;
-    align-items: center;
+.select-wrapper {
+  display: flex;
+  align-items: center;
 }
 
-select{
-    font-family: "PretendardSemi";
-    padding: .8em .5em;
-    width: 40vh;
-    height: 10vh;
-    margin: 0vh 8vh 0vh 8vh;
-    border: 1px solid #FFFFFF;
-    border-radius: 15px; 
-    background-color: rgb(255, 255, 255, 0.3);
-    -webkit-appearance: none; -moz-appearance: none;appearance: none;
-    background-image: url('../img/arrow.png'); 
-    background-repeat: no-repeat;
-    background-size: 2vh 3vh;
-    background-position: right 8% center;
-    font-size: 23px;
+select {
+  font-family: "PretendardSemi";
+  padding: 0.8em 0.5em;
+  width: 40vh;
+  height: 10vh;
+  margin: 0vh 8vh 0vh 8vh;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255, 0.3);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../img/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 2vh 3vh;
+  background-position: right 8% center;
+  font-size: 23px;
 }
 
-select:focus{
-    outline: none;
+select:focus {
+  outline: none;
 }
 
-select::-ms-expand{
-    display: none;
+select::-ms-expand {
+  display: none;
 }
 
 select option {
-    border-radius: 15px; 
-    background-color: #9acbff;
-    color: #000000;
-    padding: 3px 0;
+  border-radius: 15px;
+  background-color: #9acbff;
+  color: #000000;
+  padding: 3px 0;
 }
 
-.search-btn{
-    font-family: "PretendardSemi";
-    padding: 2vh 1vh 2vh 1vh;
-    width: 20vh;
-    height: 8vh;
-    margin-top: 1vh;
-    border: 1px solid #FFFFFF;
-    border-radius: 15px; 
-    background-color: rgb(255, 255, 255, 0.3);
-    color: #FFFFFF;
-    font-size: 28px;
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "PretendardSemi";
+  padding: 2vh 1vh 2vh 1vh;
+  width: 20vh;
+  height: 8vh;
+  margin-top: 1vh;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 28px;
 }
 
-.search-btn:hover{
-    background-color: rgba(255, 255, 255, 0);
+.search-btn:hover {
+  background-color: rgba(255, 255, 255, 0);
 }
 
-#search-img{
-    margin-left: 2vh;
+#search-img {
+  margin-left: 2vh;
+  margin-right: 2vh;
 }
 
-#go-text{
-    float: right;
-    margin-right: 3vh;
-    margin-top: -0.5vh;
+#go-text {
+  float: right;
+  margin-right: 3vh;
 }
 
-.search-box, .type-result{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.search-box,
+.type-result {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
