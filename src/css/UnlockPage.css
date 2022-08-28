@@ -11,6 +11,23 @@
   src: url("../font/Pretendard-Regular.ttf");
 }
 
+@media all and (min-width:1080px) {
+  .box{
+      flex-direction: row;
+      width: 10vh;
+  }
+  .majorText{
+    grid-column: 1/4;
+  }
+}
+
+@media all and (max-width:1080px) {
+  .box{
+      flex-direction: column;
+      grid-template-columns: 20% 20% 20% 20% 20% 20%;
+  }
+}
+
 .box {
   display: flex;
   flex: 1;
@@ -67,6 +84,14 @@
   grid-template-rows: 30px 30px 30px 30px;
   text-align: center;
   align-self: center;
+  font-size: 18px;
+  font-family: PretendardSemi;
+}
+
+.majorButton {
+  background: none;
+  border: none;
+  color: #FFFFFF;
   font-size: 18px;
   font-family: PretendardSemi;
 }
