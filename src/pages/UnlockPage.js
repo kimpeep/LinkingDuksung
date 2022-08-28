@@ -9,8 +9,7 @@ const UnlockPage = () => {
     const navigate = useNavigate();
 
     const globalClick = (e) => {
-        navigate("/dataunlock/detail", {state: {major: "바보"}});
-        // console.log(e.target.value)
+        navigate("/dataunlock/detail", {state: {major: ""}});
     }
 
     return(
