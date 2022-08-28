@@ -22,3 +22,12 @@
     align-items: center;
     padding: 10%;
 }
+
+.button{
+    background-color: transparent;
+    border: 2px;
+    border-color: white;
+    color: white;
+    font-family: PretendardSemi;
+    font-size: 24px;
+}
