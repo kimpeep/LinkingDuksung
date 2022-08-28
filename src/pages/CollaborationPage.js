@@ -10,10 +10,6 @@ const CollaborationPage = () => {
   const secondMajor = useRef();
 
   const handleChange = (e) => {
-    // console.log(e.target.value);
-    // ['국어국문학전공', '영어영문학전공'] => 배열.includes('국어국문학전공')
-    // setTotal 변경
-    // value none 일때 예외 처리
     console.log("1전공" + firstMajor.current.value);
     console.log("2전공" + secondMajor.current.value);
   };
@@ -23,7 +19,11 @@ const CollaborationPage = () => {
       firstMajor.current.value !== "none" &&
       secondMajor.current.value !== "none"
     ) {
+      // 실행되는 코드
       console.log("실행 가능");
+      // {firstMajor: 어쩌구, secondMajor: 저쩌구, counts: 10}
+      // forEach
+      // setTotal(숫자)
     } else {
       alert("전공을 제대로 선택하셨쇼?");
     }

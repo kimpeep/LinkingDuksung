@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "../css/UnlockPage.css";
 import GCData from "../data/GCData.json";
 import STData from "../data/STData.json";
 import ADData from "../data/ADData.json";
-
 import { useNavigate } from "react-router-dom";
 
 const UnlockPage = () => {
