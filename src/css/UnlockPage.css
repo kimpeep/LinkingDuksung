@@ -71,6 +71,14 @@
   font-family: PretendardSemi;
 }
 
+.majorButton {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: PretendardSemi;
+}
+
 .text {
   display: grid;
   justify-content: stretch;

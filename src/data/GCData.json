@@ -2,7 +2,8 @@
   "data": [
     {
       "number": 1,
-      "major": "국어국문학전공"
+      "major": "국어국문학전공",
+      "eng": "korea"
     },
     {
       "number": 2,

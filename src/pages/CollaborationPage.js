@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../css/CollaborationPage.css";
 import search from "../img/search.png";
 import majorData from "../data/majorData.json";
@@ -6,25 +6,35 @@ import { useState } from "react";
 
 const CollaborationPage = () => {
   const [total, setTotal] = useState(0);
+  const firstMajor = useRef();
+  const secondMajor = useRef();
 
   const handleChange = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     // ['국어국문학전공', '영어영문학전공'] => 배열.includes('국어국문학전공')
     // setTotal 변경
+    // value none 일때 예외 처리
+    console.log("1전공" + firstMajor.current.value);
+    console.log("2전공" + secondMajor.current.value);
   };
 
   const handleClick = (e) => {
-    setTotal(3);
+    if (
+      firstMajor.current.value !== "none" &&
+      secondMajor.current.value !== "none"
+    ) {
+      console.log("실행 가능");
+    } else {
+      alert("전공을 제대로 선택하셨쇼?");
+    }
   };
 
   return (
     <>
       <div className="CollaborationPage" onChange={handleChange}>
         <div className="select-wrapper">
-          <select>
-            <option value={"none"} disabled>
-              1전공
-            </option>
+          <select ref={firstMajor}>
+            <option value={"none"}>1전공</option>
             {majorData &&
               majorData.major.map((mdata) => (
                 <option key={mdata._id} value={mdata.type}>
@@ -33,10 +43,8 @@ const CollaborationPage = () => {
               ))}
           </select>
           <p>과</p>
-          <select>
-            <option value={"none"} disabled>
-              2전공
-            </option>
+          <select ref={secondMajor}>
+            <option value={"none"}>2전공</option>
             {majorData &&
               majorData.major.map((mdata) => (
                 <option key={mdata._id} value={mdata.type}>
