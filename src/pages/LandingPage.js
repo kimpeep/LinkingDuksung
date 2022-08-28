@@ -1,9 +1,10 @@
 import React from 'react';
+import "../css/LandingPage.css"
 
 const LandingPage = () => {
     return(
         <div className='landing'>
-        LandingPage
+        Linking at Duksung
         </div>
     )
 

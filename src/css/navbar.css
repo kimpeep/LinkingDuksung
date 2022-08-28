@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "MontserratExtra";
+    src: url("../font/Montserrat-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "MontserratSemi";
+    src: url("../font/Montserrat-SemiBold.ttf");
+}
+@font-face {
+    font-family: "MontserratRegular";
+    src: url("../font/Montserrat-Regular.ttf");
+}
+
 .navbar {
     background: transparent ;
     height: 80px;
@@ -7,6 +20,7 @@
     color: #FFFFFF;
     justify-content: space-between;
     align-content: center;
+    font-family: MontserratRegular;
 }
 
 .left{
