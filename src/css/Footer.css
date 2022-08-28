@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "PretendardExtra";
+    src: url("../font/Pretendard-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "PretendardSemi";
+    src: url("../font/Pretendard-SemiBold.ttf");
+}
+@font-face {
+    font-family: "PretendardRegular";
+    src: url("../font/Pretendard-Regular.ttf");
+}
+
 .footer {
     background: transparent ;
     height: 100%;
@@ -5,6 +18,7 @@
     font-size: 15px;
     color: #F4EEE4;
     text-align: center;
+    font-family: PretendardRegular;
 }
 
 .footer-center {

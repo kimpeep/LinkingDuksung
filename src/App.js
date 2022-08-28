@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import Navbar from './component/Navbar';
 import UnlockPage from './pages/UnlockPage';
 import CollaborationPage from './pages/CollaborationPage';
+import DetailPage from './pages/DetailPage';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path ="/" element={<Navbar />}>
           <Route path="/" element={<LandingPage />}/>
           <Route path="/dataunlock" element={<UnlockPage />}/>
+          <Route path="/dataunlock/detail" element={<DetailPage />}/>
           <Route path="/collaboration" element={<CollaborationPage />}/>
         </Route>
       </Routes>

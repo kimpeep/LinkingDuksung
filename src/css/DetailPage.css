@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "PretendardExtra";
+    src: url("../font/Pretendard-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "PretendardSemi";
+    src: url("../font/Pretendard-SemiBold.ttf");
+}
+@font-face {
+    font-family: "PretendardRegular";
+    src: url("../font/Pretendard-Regular.ttf");
+}
+
+.detail{
+    color: white;
+    height: 70%;
+    width: 80%;
+    font-family: PretendardSemi;
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+}
