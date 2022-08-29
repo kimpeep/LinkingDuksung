@@ -113,3 +113,12 @@ select option {
   align-items: center;
   flex-direction: column;
 }
+
+.micro-text {
+  font-size: 30px;
+  word-break: keep-all;
+}
+
+.text-default {
+  word-break: keep-all;
+}

@@ -2,11 +2,13 @@ import React, { useRef } from "react";
 import "../css/CollaborationPage.css";
 import search from "../img/search.png";
 import majorData from "../data/majorData.json";
+import { microData } from "../data/MicroDegreeClass";
 import collaData from "../data/CollaborationData.json";
 import { useState } from "react";
 
 const CollaborationPage = () => {
   const [total, setTotal] = useState(-1);
+  const [microClass, setMicroClass] = useState([]);
   const firstMajor = useRef();
   const secondMajor = useRef();
 
@@ -16,24 +18,44 @@ const CollaborationPage = () => {
   };
 
   const handleClick = (e) => {
-    let flag = false;
+    let majorFlag = false;
+    let microFlag = false;
+    let microArr = [];
+
     if (
       firstMajor.current.value !== "none" &&
       secondMajor.current.value !== "none"
     ) {
       console.log("실행 가능");
-      collaData.map((el) => {
+      collaData.forEach((el) => {
         if (
           el.major_1 === firstMajor.current.value &&
           el.major_2 === secondMajor.current.value
         ) {
           setTotal(el.counts);
-          flag = true;
+          majorFlag = true;
           console.log(el.counts);
         }
       });
-      if (!flag) {
+      if (!majorFlag) {
         setTotal(0);
+      } else {
+        // 마이크로 디그리 과정 나타내기
+        microData.forEach((c) => {
+          if (
+            c.classes.includes(firstMajor.current.value) &&
+            c.classes.includes(secondMajor.current.value)
+          ) {
+            // setMicroClass(...microClass, c.className);
+            microArr.push(c.className);
+            microFlag = true;
+          }
+        });
+        if (!microFlag) {
+          setMicroClass([]);
+        } else {
+          setMicroClass(microArr);
+        }
       }
     } else {
       alert("전공을 제대로 선택하셨쇼?");
@@ -79,7 +101,9 @@ const CollaborationPage = () => {
         </div>
         <div className="type-result" id="type-result">
           {total === -1 ? (
-            <p>1전공과 2전공을 선택하고 GO! 버튼을 클릭해보세요 !</p>
+            <p className="text-default">
+              1전공과 2전공을 선택하고 GO! 버튼을 클릭해보세요 !
+            </p>
           ) : (
             <>
               {total === 0 ? (
@@ -92,6 +116,16 @@ const CollaborationPage = () => {
                 </p>
               )}
             </>
+          )}
+          {microClass && (
+            <p className="micro-text">
+              두 전공 간 개설된 마이크로 디그리 교육과정은&nbsp;
+              {microClass.map((c, index) => {
+                if (index !== microClass.length - 1) return c + ", ";
+                else return c;
+              })}
+              입니다. 😎
+            </p>
           )}
         </div>
       </div>
