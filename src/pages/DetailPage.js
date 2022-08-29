@@ -6,7 +6,6 @@ import ratioData from "../data/MajorRatioData.json";
 
 const DetailPage = (props) => {
   const location = useLocation();
-  //   console.log(location.state.major);
   const major = location.state.major || "";
   const [IntensiveRatio, setIntensiveRatio] = useState(100);
   const [SecondRatio, setSecondRatio] = useState(100);
@@ -16,22 +15,21 @@ const DetailPage = (props) => {
 
   useEffect(() => {
     const ratio = ratioData.filter((data) => {
-      return data.Major === location.state.major;
+      return data.major === location.state.major;
     });
     setIntensiveRatio(
       Math.round(
-        (ratio[0].Intensive / (ratio[0].Intensive + ratio[0].Second)) * 100
+        (ratio[0].intensive / (ratio[0].intensive + ratio[0].second)) * 100
       )
     );
     setSecondRatio(
       Math.round(
-        (ratio[0].Second / (ratio[0].Intensive + ratio[0].Second)) * 100
+        (ratio[0].second / (ratio[0].intensive + ratio[0].second)) * 100
       )
     );
-    // console.log(ratio.Second / (ratio.Intensive + ratio.Second));
     console.log(
       Math.round(
-        (ratio[0].Second / (ratio[0].Intensive + ratio[0].Second)) * 100
+        (ratio[0].second / (ratio[0].intensive + ratio[0].second)) * 100
       )
     );
   }, []);
