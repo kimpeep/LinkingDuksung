@@ -47,7 +47,14 @@
   flex-direction: row;
   margin-left: 20px;
   margin-right: 30px;
-  flex-wrap: wrap;
+}
+@media all and (max-width: 768px) {
+  .collage {
+    flex-wrap: wrap;
+  }
+  .majorText {
+    justify-content: center;
+  }
 }
 
 .collageText {
