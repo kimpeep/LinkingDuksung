@@ -1,18 +1,40 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../css/CollaborationPage.css";
 import search from "../img/search.png";
 import majorData from "../data/majorData.json";
+import { useState } from "react";
 
 const CollaborationPage = () => {
+  const [total, setTotal] = useState(0);
+  const firstMajor = useRef();
+  const secondMajor = useRef();
+
   const handleChange = (e) => {
-    //console.log(e.target.value);
+    console.log("1전공" + firstMajor.current.value);
+    console.log("2전공" + secondMajor.current.value);
+  };
+
+  const handleClick = (e) => {
+    if (
+      firstMajor.current.value !== "none" &&
+      secondMajor.current.value !== "none"
+    ) {
+      // 실행되는 코드
+      console.log("실행 가능");
+      // {firstMajor: 어쩌구, secondMajor: 저쩌구, counts: 10}
+      // forEach
+      // setTotal(숫자)
+    } else {
+      alert("전공을 제대로 선택하셨쇼?");
+    }
   };
 
   return (
     <>
       <div className="CollaborationPage" onChange={handleChange}>
         <div className="select-wrapper">
-          <select>
+          <select ref={firstMajor}>
+            <option value={"none"}>1전공</option>
             {majorData &&
               majorData.major.map((mdata) => (
                 <option key={mdata._id} value={mdata.type}>
@@ -21,7 +43,8 @@ const CollaborationPage = () => {
               ))}
           </select>
           <p>과</p>
-          <select>
+          <select ref={secondMajor}>
+            <option value={"none"}>2전공</option>
             {majorData &&
               majorData.major.map((mdata) => (
                 <option key={mdata._id} value={mdata.type}>
@@ -32,7 +55,7 @@ const CollaborationPage = () => {
           <p>을 선택한 사람은?</p>
         </div>
         <div className="search-box">
-          <button className="search-btn">
+          <button className="search-btn" onClick={handleClick}>
             <img
               id="search-img"
               src={search}
@@ -45,7 +68,7 @@ const CollaborationPage = () => {
         </div>
         <div className="type-result" id="type-result">
           <p>
-            총 <span>0</span> 명이에요!
+            총 <span>{total}</span> 명이에요!
           </p>
         </div>
       </div>
