@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/UnlockPage.css";
 import GCData from "../data/GCData.json";
 import STData from "../data/STData.json";
@@ -7,11 +7,9 @@ import { useNavigate } from "react-router-dom";
 
 const UnlockPage = () => {
   const navigate = useNavigate();
-  const [num, setNum] = useState(0);
 
-  const globalClick = (e) => {
+  const detailClick = (e) => {
     navigate("/dataunlock/detail", { state: { major: e.target.value } });
-    // console.log(e.target.value);
   };
 
   return (
@@ -27,7 +25,7 @@ const UnlockPage = () => {
             {GCData.data.map((data) => {
               return (
                 <button
-                  onClick={globalClick}
+                  onClick={detailClick}
                   className="majorButton"
                   value={data.major}
                 >
@@ -48,7 +46,7 @@ const UnlockPage = () => {
             {STData.data.map((data) => {
               return (
                 <button
-                  onClick={globalClick}
+                  onClick={detailClick}
                   className="majorButton"
                   value={data.major}
                 >
@@ -60,12 +58,11 @@ const UnlockPage = () => {
         </div>
         <div className="collage">
           <p className="collageText">Art&Design</p>
-          {/* <p className="majorText">{ADData.data.map(data => {return <p>{data.major}&nbsp;&nbsp;&nbsp;</p>})}</p> */}
-          <p className="text">
+          <p className="majorText">
             {ADData.data.map((data) => {
               return (
                 <button
-                  onClick={globalClick}
+                  onClick={detailClick}
                   className="majorButton"
                   value={data.major}
                 >

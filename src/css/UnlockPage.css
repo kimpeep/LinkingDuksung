@@ -11,28 +11,10 @@
   src: url("../font/Pretendard-Regular.ttf");
 }
 
-@media all and (min-width: 1080px) {
-  /* .box {
-    flex-direction: row;
-    width: 10vh;
-  } */
-  /* .majorText {
-    grid-column: 1/4;
-  } */
-}
-
-@media all and (max-width: 1080px) {
-  /* .box {
-    flex-direction: column;
-    grid-template-columns: 20% 20% 20% 20% 20% 20%;
-  } */
-}
-
 .box {
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  /* width: 100vh; */
   min-width: 500px;
   min-height: 67.6vh;
   align-items: flex-start;
@@ -80,15 +62,10 @@
 }
 
 .majorText {
-  /* display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20% 20%;
-  grid-template-rows: 30px 30px 30px 30px; */
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: stretch; */
   align-items: center;
   text-align: center;
-  /* align-self: center; */
   font-size: 18px;
   font-family: PretendardSemi;
 }
@@ -101,14 +78,4 @@
   font-family: PretendardSemi;
   width: 160px;
   height: 45px;
-}
-
-.text {
-  display: grid;
-  justify-content: stretch;
-  grid-template-columns: 145px 145px 145px 145px 153px;
-  text-align: center;
-  align-self: center;
-  font-size: 18px;
-  font-family: PretendardSemi;
 }
