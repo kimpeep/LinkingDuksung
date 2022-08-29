@@ -37,6 +37,7 @@ const UnlockPage = () => {
             <br />
             Technology
           </p>
+
           <p className="majorText">
             {STData.data.map((data) => {
               return <p>{data.major}&nbsp;&nbsp;&nbsp;</p>;
