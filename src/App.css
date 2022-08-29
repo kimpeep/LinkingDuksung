@@ -1,5 +1,9 @@
 body {
   background: url(./img/school.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
+}
+
+#root {
+  height: 100vh;
 }

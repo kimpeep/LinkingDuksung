@@ -101,8 +101,8 @@ const CollaborationPage = () => {
         </div>
         <div className="type-result" id="type-result">
           {total === -1 ? (
-            <p className="text-default">
-              1전공과 2전공을 선택하고 GO! 버튼을 클릭해보세요 !
+            <p className="default-text">
+              1전공과 2전공을 선택하고 GO! 버튼을 클릭해보세요!
             </p>
           ) : (
             <>
@@ -117,13 +117,18 @@ const CollaborationPage = () => {
               )}
             </>
           )}
-          {microClass && (
+          {microClass.length > 0 && (
             <p className="micro-text">
               두 전공 간 개설된 마이크로 디그리 교육과정은&nbsp;
-              {microClass.map((c, index) => {
-                if (index !== microClass.length - 1) return c + ", ";
-                else return c;
-              })}
+              <a
+                className="link-text"
+                href="https://www.duksung.ac.kr/oscar/contents/contents.do?ciIdx=2835&menuId=3955"
+              >
+                {microClass.map((c, index) => {
+                  if (index !== microClass.length - 1) return c + ", ";
+                  else return c;
+                })}
+              </a>
               입니다. 😎
             </p>
           )}

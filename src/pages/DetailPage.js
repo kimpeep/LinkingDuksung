@@ -44,10 +44,18 @@ const DetailPage = (props) => {
         {major}을 선택한 사람은 다음과 같은 비율이에요!
       </div>
       <div className="graph">
-        <div className="circle" style={{ width: first, height: first }}>
+        <div
+          className="circle"
+          id="advanced"
+          style={{ width: first, height: first }}
+        >
           심화전공 <br /> {IntensiveRatio}%
         </div>
-        <div className="circle" style={{ width: second, height: second }}>
+        <div
+          className="circle"
+          id="second"
+          style={{ width: second, height: second }}
+        >
           제2전공 <br /> {SecondRatio}%
         </div>
       </div>
