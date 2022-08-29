@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import "../css/CollaborationPage.css";
 import search from "../img/search.png";
 import majorData from "../data/majorData.json";
+import collaData from "../data/CollaborationData.json";
 import { useState } from "react";
 
 const CollaborationPage = () => {
@@ -10,8 +11,8 @@ const CollaborationPage = () => {
   const secondMajor = useRef();
 
   const handleChange = (e) => {
-    console.log("1전공" + firstMajor.current.value);
-    console.log("2전공" + secondMajor.current.value);
+    console.log("1전공: " + firstMajor.current.value);
+    console.log("2전공: " + secondMajor.current.value);
   };
 
   const handleClick = (e) => {
@@ -19,11 +20,15 @@ const CollaborationPage = () => {
       firstMajor.current.value !== "none" &&
       secondMajor.current.value !== "none"
     ) {
-      // 실행되는 코드
       console.log("실행 가능");
-      // {firstMajor: 어쩌구, secondMajor: 저쩌구, counts: 10}
-      // forEach
-      // setTotal(숫자)
+      collaData.map((el) => {
+        if (
+          el.major_1 === firstMajor.current.value &&
+          el.major_2 === secondMajor.current.value
+        ) {
+          setTotal(el.counts);
+        }
+      });
     } else {
       alert("전공을 제대로 선택하셨쇼?");
     }

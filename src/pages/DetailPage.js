@@ -27,15 +27,15 @@ const DetailPage = (props) => {
         (ratio[0].second / (ratio[0].intensive + ratio[0].second)) * 100
       )
     );
-    console.log(
-      Math.round(
-        (ratio[0].second / (ratio[0].intensive + ratio[0].second)) * 100
-      )
-    );
+    // console.log(
+    //   Math.round(
+    //     (ratio[0].second / (ratio[0].intensive + ratio[0].second)) * 100
+    //   )
+    // );
   }, []);
 
   useEffect(() => {
-    console.log(IntensiveRatio);
+    //console.log(IntensiveRatio);
   }, [IntensiveRatio]);
 
   return (
