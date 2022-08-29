@@ -1,63 +1,62 @@
 @font-face {
-    font-family: "MontserratExtra";
-    src: url("../font/Montserrat-ExtraBold.ttf");
+  font-family: "MontserratExtra";
+  src: url("../font/Montserrat-ExtraBold.ttf");
 }
 @font-face {
-    font-family: "MontserratSemi";
-    src: url("../font/Montserrat-SemiBold.ttf");
+  font-family: "MontserratSemi";
+  src: url("../font/Montserrat-SemiBold.ttf");
 }
 @font-face {
-    font-family: "MontserratRegular";
-    src: url("../font/Montserrat-Regular.ttf");
+  font-family: "MontserratRegular";
+  src: url("../font/Montserrat-Regular.ttf");
 }
 
-.landing{
-    color: white;
-    height: 70%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10%;
+.landing {
+  color: white;
+  height: 70%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
 }
 
-.landingButton{
-    background-color: transparent;
-    border: 2px;
-    border-radius: 10px;
-    border-color: white;
-    color: white;
-    font-family: MontserratSemi;
-    font-size: 24px;
-    padding: 10%;
+.landingButton {
+  background-color: transparent;
+  border: 2px;
+  border-radius: 10px;
+  border-color: white;
+  color: white;
+  font-family: MontserratSemi;
+  font-size: 36px;
+  padding: 10%;
 }
 
-.Text{
-    display: flex;
-    flex-direction: row;
+.Text {
+  display: flex;
+  flex-direction: row;
 }
-.bigText{
-    font-family: MontserratExtra;
-    font-size: 80px;
-    padding: 50px;
+.bigText {
+  font-family: MontserratExtra;
+  font-size: 80px;
+  padding: 50px;
 }
-.smallText{
-    font-family: MontserratSemi;
-    font-size: 36px;
-    flex-direction: row;  
-    animation: fadein 2s ease-in-out;
-	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-animation: hue 10s infinite linear;
+.smallText {
+  font-family: MontserratSemi;
+  font-size: 36px;
+  flex-direction: row;
+  animation: fadein 2s ease-in-out;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
 }
 
 @keyframes hue {
-    from {
-      -webkit-filter: hue-rotate(0deg);
-    }
-    to {
-      -webkit-filter: hue-rotate(-360deg);
-    }
+  from {
+    -webkit-filter: hue-rotate(0deg);
   }
-  
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}

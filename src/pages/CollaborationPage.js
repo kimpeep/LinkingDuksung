@@ -6,7 +6,7 @@ import collaData from "../data/CollaborationData.json";
 import { useState } from "react";
 
 const CollaborationPage = () => {
-  const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState(-1);
   const firstMajor = useRef();
   const secondMajor = useRef();
 
@@ -16,6 +16,7 @@ const CollaborationPage = () => {
   };
 
   const handleClick = (e) => {
+    let flag = false;
     if (
       firstMajor.current.value !== "none" &&
       secondMajor.current.value !== "none"
@@ -27,8 +28,13 @@ const CollaborationPage = () => {
           el.major_2 === secondMajor.current.value
         ) {
           setTotal(el.counts);
+          flag = true;
+          console.log(el.counts);
         }
       });
+      if (!flag) {
+        setTotal(0);
+      }
     } else {
       alert("전공을 제대로 선택하셨쇼?");
     }
@@ -72,9 +78,21 @@ const CollaborationPage = () => {
           </button>
         </div>
         <div className="type-result" id="type-result">
-          <p>
-            총 <span>{total}</span> 명이에요!
-          </p>
+          {total === -1 ? (
+            <p>1전공과 2전공을 선택하고 GO! 버튼을 클릭해보세요 !</p>
+          ) : (
+            <>
+              {total === 0 ? (
+                <p>
+                  해당 조합을 선택한 학우가 아무도 없네요! 저런, 아쉬워요. 😎
+                </p>
+              ) : (
+                <p>
+                  총 <span>{total}</span> 명이에요!
+                </p>
+              )}
+            </>
+          )}
         </div>
       </div>
     </>
